@@ -1,0 +1,166 @@
+---
+import Git from "./icons/Git.astro";
+import GitHub from "./icons/GitHub.astro";
+import Java from "./icons/Java.astro";
+import JavaScript from "./icons/JavaScript.astro";
+import Jwt from "./icons/Jwt.astro";
+import Link from "./icons/Link.astro";
+import MongoDB from "./icons/MongoDB.astro";
+import MySQL from "./icons/MySQL.astro";
+import Node from "./icons/Node.astro";
+import Python from "./icons/Python.astro";
+import React from "./icons/React.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import Vercel from "./icons/Vercel.astro";
+import LinkButton from "./LinkButton.astro";
+
+const TAGS = {
+  TAILWIND: {
+    name: "Tailwind",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+  },
+  REACT: {
+    name: "React",
+    class: "bg-[#003159] text-white",
+    icon: React,
+  },
+  NODE: {
+    name: "Node",
+    class: "bg-[#166C23] text-white",
+    icon: Node,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-[#CCC200] text-white",
+    icon: JavaScript,
+  },
+  JAVA: {
+    name: "Java",
+    class: "bg-[#011280] text-white",
+    icon: Java,
+  },
+  VERCEL: {
+    name: "Vercel",
+    class: "bg-[111110] text-white",
+    icon: Vercel,
+  },
+  MYSQL: {
+    name: "MySQL",
+    class: "bg-[#159FBE] text-white",
+    icon: MySQL,
+  },
+  MONGODB: {
+    name: "Mongo",
+    class: "bg-[#4DB33D] text-white",
+    icon: MongoDB,
+  },
+  JWT: {
+    name: "JWT",
+    class: "bg-[#111110] text-white",
+    icon: Jwt,
+  },
+  GIT: {
+    name: "Git",
+    class: "bg-[#F79446] text-white",
+    icon: Git,
+  },
+  REACTNATIVE: {
+    name: "Native",
+    class: "bg-[#003159] text-white",
+    icon: React,
+  },
+  PYTHON: {
+    name: "Python",
+    class: "bg-[#1A2F41] text-white",
+    icon: Python,
+  },
+};
+const PROJECTS = [
+  {
+    title: "Estructuras condicionales",
+    description: "He aprendido a usar las estructuras condicionales en Python, incluyendo las estructuras simples, compuestas y anidadas. También he aprendido a utilizar operadores de comparación y lógicos para construir condiciones complejas. Este conocimiento me ha permitido tomar decisiones en el código basadas en diferentes criterios, lo cual es fundamental para el desarrollo de programas más dinámicos y funcionales. Además, he explorado cómo las estructuras condicionales pueden mejorar la eficiencia y claridad del código al permitir la ejecución selectiva de bloques de código en función de ciertas condiciones.",
+    github: "",
+    link: "",
+    image: "/projects/condicionales.png",
+    tags: [
+      TAGS.PYTHON
+    ],
+  },
+  {
+    title: "Estructuras repetitivas",
+    description: "He aprendido a usar las estructuras repetitivas en Python, incluyendo los bucles while, do while y for. Estas estructuras me permiten ejecutar un bloque de código varias veces, lo cual es esencial para tareas que requieren repetición. He aprendido a utilizar el bucle while para ejecutar código mientras una condición sea verdadera, y el bucle do while para asegurar que el código se ejecute al menos una vez antes de verificar la condición. Además, he explorado el bucle for, que es ideal para iterar sobre secuencias como listas o rangos de números. Comprender las diferencias entre estos bucles y cuándo utilizarlos me ha permitido escribir código más eficiente y claro. También he aprendido a utilizar las declaraciones break y continue para controlar el flujo de los bucles, lo cual es útil para manejar casos especiales y optimizar el rendimiento del programa.",
+    github: "",
+    link: "",
+    image: "/projects/ciclos.png",
+    tags: [
+      TAGS.PYTHON
+    ],
+  },
+  {
+    title: "Design Thinking",
+    description:"Estoy explorando el Design Thinking, y me parece fascinante cómo esta metodología puede aplicarse al desarrollo de software y la resolución de problemas tecnológicos. Me ha ayudado a comprender la importancia de centrarse en las necesidades del usuario, prototipar soluciones rápidamente y probar ideas de forma iterativa. Además, he aprendido a trabajar en equipo y colaborar con otros para generar ideas innovadoras y creativas. El Design Thinking me ha permitido adoptar un enfoque más humano y centrado en el usuario, lo cual ha mejorado la calidad y la usabilidad de mis proyectos.",
+    github: "",
+    link: "",
+    image: "/projects/design-thinking.jpg",
+    tags: [
+      
+    ],
+  },
+];
+---
+
+<div class="flex flex-col gap-y-16">
+  {
+    PROJECTS.map(({ title, description, github, link, image, tags }) => (
+      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:items-center md:space-x-8 md:space-y-0">
+        <div class="w-full md:w-1/2">
+          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+            <img
+              alt={title}
+              class="object-cover object-center w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+              loading="eager"
+              src={image}
+            />
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 md:max-w-lg">
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+            {title}
+          </h3>
+          <div class="flex flex-wrap mt-2">
+            <ul class="flex flex-wrap gap-x-3 gap-y-2 mb-2">
+              {tags.map((tag) => (
+                <li>
+                  <span
+                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                  >
+                    <tag.icon class="size-4" />
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <div class="mt-2 text-gray-700 dark:text-gray-400">
+              {description}
+            </div>
+            <footer class="flex items-end justify-start mt-4 gap-x-4">
+              {github && (
+                <LinkButton href={github}>
+                  <GitHub class="size-6" />
+                  Code
+                </LinkButton>
+              )}
+              {link && (
+                <LinkButton href={link}>
+                  <Link class="size-4" />
+                  Preview
+                </LinkButton>
+              )}
+            </footer>
+          </div>
+        </div>
+      </article>
+    ))
+  }
+</div>

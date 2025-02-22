@@ -1,0 +1,58 @@
+---
+import Badge from "@/components/Badge.astro";
+import LinkedinIcon from "@/components/icons/Linkedin.astro";
+import MailIcon from "@/components/icons/Mail.astro";
+import SocialPill from "@/components/SocialPill.astro";
+import CV from "./icons/CV.astro";
+import GitHub from "./icons/GitHub.astro";
+---
+
+<div class="max-w-3xl">
+  <div class="flex gap-4 mb-4">
+    <img
+      class="rounded-full shadow-lg size-16"
+      src="/meIcon.png"
+      alt="Weslly Cabrera"
+    />
+    <a
+      href="https://www.canva.com/design/DAF8xoJtsA8/HDBK0hHJdJh6BDlxAU621w/view?utm_content=DAF8xoJtsA8&utm_campaign=designshare&utm_medium=link&utm_source=editor"
+      target="_blank"
+      rel="noopener"
+      class="flex items-center transition md:justify-center md:hover:scale-105"
+    >
+      <Badge>Estudiando</Badge>
+    </a>
+  </div>
+  <h1
+    class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+  >
+    Hola, soy Weslly Cabrera 👋
+  </h1>
+  <p
+    class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
+  >
+    Tengo 18 años, me gradué del  <strong>Centro Educativo Técnico Laboral Kinal</strong>. En dónde obtuve el título de <strong>Perito en Informática</strong>. Actualmente estoy estudiando en
+    <strong>Universidad del Valle de Guatemala</strong> la carrera de
+    <strong>Ingeniería en Ciencias de la Computación y Tecnologías de la Información</strong>.
+  </p>
+  <nav class="flex flex-wrap gap-4 mt-8">
+    <SocialPill href="mailto:wesly.cabrera12@gmail.com">
+      <MailIcon class="size-4" />
+      Contáctame
+    </SocialPill>
+    <SocialPill href="https://www.linkedin.com/in/wesllycabrera/">
+      <LinkedinIcon class="size-4" />
+      LinkedIn
+    </SocialPill>
+    <SocialPill href="https://github.com/wcabrera-2022060">
+      <GitHub class="size-4" />
+      GitHub
+    </SocialPill>
+    <SocialPill
+      href="https://www.canva.com/design/DAF8xoJtsA8/HDBK0hHJdJh6BDlxAU621w/view?utm_content=DAF8xoJtsA8&utm_campaign=designshare&utm_medium=link&utm_source=editor"
+    >
+      <CV class="size-4" />
+      Ver CV
+    </SocialPill>
+  </nav>
+</div>
